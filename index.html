@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script defer src="./script.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <title>Cotizador de seguros con switch</title>
+  </head>
+  <body>
+    <div class="container flex justify-center my-10">
+      <div class="bg-gray-200 p-6 rounded-xl shadow-xl" id="contanido">
+        <div class="text-3xl mb-6">Cotizador de Seguros</div>
+        <div class="formulario">
+          <form id="cotizar-seguro">
+            <div id="mensaje-error"></div>
+            <div class="mb-2">
+              <label>Marca</label>
+              <select name="marca" id="marca" class="rounded">
+                <option value="">-- Selecciona --</option>
+                <option value="honda">Honda</option>
+                <option value="yamaha">Yamaha</option>
+                <option value="benelli">Benelli</option>
+                <option value="zanella">Zanella</option>
+                <option value="bmw">BMW</option>
+              </select>
+            </div>
+            <div class="mb-2">
+              <label>Año</label>
+              <select name="year" id="year" class="rounded"></select>
+            </div>
+            <div class="mb-2">
+              <label>Cilindrada</label>
+              <select name="cilindrada" id="cilindrada" class="rounded">
+                <option value="">-- Selecciona --</option>
+                <option value="50">0-50cm3</option>
+                <option value="125">50-125cm3</option>
+                <option value="200">125-200cm3</option>
+                <option value="1000">200-1000cm3</option>
+              </select>
+            </div>
+            <div class="mb-2">
+              <label>Color</label>
+              <select name="color" id="color" class="rounded">
+                <option value="">-- Selecciona --</option>
+                <option value="negra">Negra</option>
+                <option value="roja">Roja</option>
+                <option value="blanca">Blanca</option>
+                <option value="verde">Verde</option>
+                <option value="azul">Azul</option>
+              </select>
+            </div>
+            <fieldset>
+              <legend class="font-bold uppercase text-xl w-full mt-2">
+                Tipo Seguro
+              </legend>
+              <div class="mt-2">
+                <div>
+                  <label class="font-bold uppercase mr-2">Básico</label>
+                  <input type="radio" name="tipo" value="basico" checked />
+                </div>
+                <div>
+                  <label class="font-bold uppercase mr-2">Completo</label>
+                  <input type="radio" name="tipo" value="completo" />
+                </div>
+              </div>
+            </fieldset>
+            <div id="cargando" class="hidden">
+              <div class="spinner">
+                <div class="rect1"></div>
+                <div class="rect2"></div>
+                <div class="rect3"></div>
+                <div class="rect4"></div>
+                <div class="rect5"></div>
+              </div>
+            </div>
+
+            <div class="py-4">
+              <button
+                type="submit"
+                class="mx-auto w-full bg-teal-500 hover:bg-teal-700 text-white font-bold py-2 px-20 rounded"
+              >
+                Cotizar Seguro
+              </button>
+            </div>
+            <div id="resultado"></div>
+            <div id="errorMessage"></div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

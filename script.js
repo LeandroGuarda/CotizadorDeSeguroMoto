@@ -86,12 +86,10 @@ UI.prototype.mostrarMensaje = (mensaje) => {
 
 UI.prototype.mostrarResultado = function (total, seguro) {
 
-/*const dolarInfo = () => {
-    return fetch("https://dolarapi.com/v1/dolares/blue")
-  .then(response => response.json())
-  .then(data => console.log(data));
-}
-*/
+    
+
+
+
 
     const { marca, year, tipo } = seguro;
     let txtMarca = '';
@@ -118,9 +116,11 @@ UI.prototype.mostrarResultado = function (total, seguro) {
     <p class='font-bold'> Total: <span class='font-normal'> $${total}</span> </p>
     </div>`;
 
-    const resultadoDiv = document.querySelector('#resultado');
+    const resultadoDiv = document.querySelector('#resultado',);
     resultadoDiv.appendChild(div);
 }
+
+
 
 // Instancia UI
 
@@ -187,3 +187,40 @@ function cotizarSeguro(e) {
 
 }
 
+
+// const cardsContainer = document.querySelector("#div")
+
+// fetch("https://dolarapi.com/v1/dolares/blue")
+//     .then(resp => resp.json())
+//     .then(data => {
+//         const card = document.createElement("div");
+//         card.classList.add('card', 'm-2', 'shadow');
+
+//         const cardBody = document.createElement("div")
+//         cardBody.classList.add('card-body')
+
+
+//         cardBody.innerHTML = `
+//         <h5 class = "card-title" >${data.moneda}</h5>
+//         <h5 class = "card-title" >${data.casa}</h5>
+//         <h5 class = "card-title" >${data.compra}</h5>
+//         <h5 class = "card-title" >${data.venta}</h5>
+    
+//         `
+//         card.appendChild(cardBody)
+//         cardsContainer.appendChild(card)
+
+//     })
+
+//     .catch(err = {
+//         const err = document.createElement("div")
+//     })
+//  const dolarInfo = () => {
+//      return fetch("https://dolarapi.com/v1/dolares/blue")
+//          .then(response => response.json())
+//          .then(data => {
+//              const card = document.createElement("div");
+//              card.classList('card', 'm-2', 'shadow');
+//          });
+
+//  }

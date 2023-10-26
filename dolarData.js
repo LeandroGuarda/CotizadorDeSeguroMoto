@@ -11,8 +11,8 @@ const mostrarData = (data) => {
         content.innerHTML = `
       <div>
         <h1>Fecha de Actualización: ${data.fechaActualizacion}</h1>
-        <h2>Valor de compra: ${data.compra}</h2>
-        <h3>Valor de venta: ${data.venta}</h3>
+        <h2>Valor de compra: $ ${data.compra}</h2>
+        <h3>Valor de venta: $ ${data.venta}</h3>
       </div>
     `;
     }

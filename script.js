@@ -164,7 +164,7 @@ function cotizarSeguro(e) {
     const tipo = document.querySelector('input[name=tipo]:checked').value;
 
     if ((marca === "") || (year === "") || (cilindrada === "") || (color === "") || (tipo === "")) {
-        console.log(ui)
+        
         ui.mostrarMensaje('Todos los campos son obligatorios');
         return;
 

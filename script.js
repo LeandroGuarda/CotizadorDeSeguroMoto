@@ -86,7 +86,7 @@ UI.prototype.mostrarMensaje = (mensaje) => {
 
 UI.prototype.mostrarResultado = function (total, seguro) {
 
-    
+
 
 
 
@@ -164,7 +164,7 @@ function cotizarSeguro(e) {
     const tipo = document.querySelector('input[name=tipo]:checked').value;
 
     if ((marca === "") || (year === "") || (cilindrada === "") || (color === "") || (tipo === "")) {
-        
+
         ui.mostrarMensaje('Todos los campos son obligatorios');
         return;
 
@@ -188,39 +188,3 @@ function cotizarSeguro(e) {
 }
 
 
-// const cardsContainer = document.querySelector("#div")
-
-// fetch("https://dolarapi.com/v1/dolares/blue")
-//     .then(resp => resp.json())
-//     .then(data => {
-//         const card = document.createElement("div");
-//         card.classList.add('card', 'm-2', 'shadow');
-
-//         const cardBody = document.createElement("div")
-//         cardBody.classList.add('card-body')
-
-
-//         cardBody.innerHTML = `
-//         <h5 class = "card-title" >${data.moneda}</h5>
-//         <h5 class = "card-title" >${data.casa}</h5>
-//         <h5 class = "card-title" >${data.compra}</h5>
-//         <h5 class = "card-title" >${data.venta}</h5>
-    
-//         `
-//         card.appendChild(cardBody)
-//         cardsContainer.appendChild(card)
-
-//     })
-
-//     .catch(err = {
-//         const err = document.createElement("div")
-//     })
-//  const dolarInfo = () => {
-//      return fetch("https://dolarapi.com/v1/dolares/blue")
-//          .then(response => response.json())
-//          .then(data => {
-//              const card = document.createElement("div");
-//              card.classList('card', 'm-2', 'shadow');
-//          });
-
-//  }

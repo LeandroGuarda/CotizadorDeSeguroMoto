@@ -29,7 +29,7 @@ fetch("https://dolarapi.com/v1/dolares/blue")
     });
 
 // Establece un intervalo para actualizar los datos
-const interval = 1 * 60 * 1000; // 5 minutos en milisegundos
+const interval = 1 * 60 * 1000; // 1 minutos en milisegundos
 setInterval(() => {
 
 
